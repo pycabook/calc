@@ -9,6 +9,8 @@ class Calc:
         return a - b
 
     def mul(self, *args):
+        if not all(args):
+            raise ValueError
         return reduce(lambda x, y: x*y, args)
 
     def div(self, a, b):

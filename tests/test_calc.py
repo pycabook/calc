@@ -1,3 +1,5 @@
+import pytest
+
 from calc.calc import Calc
 
 
@@ -59,3 +61,10 @@ def test_div_by_zero_returns_inf():
     res = c.div(5, 0)
 
     assert res == "inf"
+
+
+def test_mul_by_zero_raises_exception():
+    c = Calc()
+
+    with pytest.raises(ValueError):
+        c.mul(3, 0)
