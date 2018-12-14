@@ -43,3 +43,11 @@ def test_mul_many_numbers():
     s = range(1, 10)
 
     assert Calc().mul(*s) == 362880
+
+
+def test_div_two_numbers_float():
+    c = Calc()
+
+    res = c.div(13, 2)
+
+    assert res == 6.5
