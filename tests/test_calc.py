@@ -29,3 +29,11 @@ def test_subtract_two_numbers():
     res = c.sub(10, 3)
 
     assert res == 7
+
+
+def test_mul_two_numbers():
+    c = Calc()
+
+    res = c.mul(6, 4)
+
+    assert res == 24
