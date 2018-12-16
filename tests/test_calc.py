@@ -100,3 +100,11 @@ def test_avg_uppper_threshold_is_included():
     res = c.avg([2, 5, 12, 98], ut=98)
 
     assert res == 29.25
+
+
+def test_avg_lower_threshold_is_included():
+    c = Calc()
+
+    res = c.avg([2, 5, 12, 98], lt=2)
+
+    assert res == 29.25
