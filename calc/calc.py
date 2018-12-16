@@ -18,3 +18,6 @@ class Calc:
             return a / b
         except ZeroDivisionError:
             return "inf"
+
+    def avg(self, it):
+        return sum(it)/len(it)
