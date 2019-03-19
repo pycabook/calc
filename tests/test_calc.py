@@ -132,3 +132,19 @@ def test_avg_manages_empty_list_before_outlier_removal():
     res = c.avg([], lt=15, ut=90)
 
     assert res == 0
+
+
+def test_avg_manages_zero_value_lower_outlier():
+    c = Calc()
+
+    res = c.avg([-1, 0, 1], lt=0)
+
+    assert res == 0.5
+
+
+def test_avg_manages_zero_value_upper_outlier():
+    c = Calc()
+
+    res = c.avg([-1, 0, 1], ut=0)
+
+    assert res == -0.5
